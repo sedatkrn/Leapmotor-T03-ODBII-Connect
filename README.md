@@ -5,6 +5,7 @@ Leapmotor T03'ün bataryasını/aracı BLE ELM327 adaptörü ile **yalnızca oku
 - Bkz. [docs/ecu_haritasi.md](docs/ecu_haritasi.md) – ECU adresleri
 - Bkz. [docs/did_haritasi.md](docs/did_haritasi.md) – doğrulanmış / aday DID'ler
 - Bkz. [docs/bulgular.md](docs/bulgular.md) – ölçümler, açık sorular
+- `tools/t03_izleme.py` – Tkinter izleme arayüzü (tablo, grafik, CSV, etiket kutusu)
 - `tools/t03_oku.py` – BMU'dan çekirdek DID'leri okuyup CSV'ye yazan basit betik
 
 ## Güvenlik ilkeleri
@@ -23,6 +24,9 @@ sudo systemctl restart bluetooth
 Adaptör tek bağlantı destekler; başka betik/REPL açıksa kapatın.
 
 ## Kullanım
+Arayüz: `python3 tools/t03_izleme.py` (MAC'i pencereden girin; Arch/Manjaro'da `tk` paketi gerekir).
+
+Komut satırı:
 ```
 ADAPTOR_MAC=XX:XX:XX:XX:XX:XX python3 tools/t03_oku.py
 ```
